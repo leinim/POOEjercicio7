@@ -126,7 +126,7 @@ public class Persona {
         double imc;
         imc = p.getPeso() / Math.pow(p.getAltura(), 2);
         int retorno;
-        if (imc < 20.0) {
+        if (imc < 20) {
             retorno = -1;
         } else if (imc >= 20 && imc <= 25) {
             retorno = 0;

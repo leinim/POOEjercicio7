@@ -46,7 +46,7 @@ public class POOEj7 {
         Persona p1 = new Persona("Pepe", 17, "O", 60, 1.53);
         Persona p2 = new Persona("Mariano", 14, "M", 59, 1.53);
         Persona p3 = new Persona("Cami", 15, "F", 57, 1.53);
-        Persona p4 = new Persona("Susana", 36, "O", 58, 1.53);
+        Persona p4 = new Persona("Susana", 36, "O", 40, 1.53);
         
         int[] peso = new int [4]; 
         boolean[] edad = new boolean[4];
