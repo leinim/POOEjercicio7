@@ -45,13 +45,13 @@ public class Persona {
     public int edad;
     public String sexo;
     public int peso;
-    public int altura;
+    public double altura;
     
     
     public Persona() {
     }
 
-    public Persona(String nombre, int edad, String sexo, int peso, int altura) {
+    public Persona(String nombre, int edad, String sexo, int peso, double altura) {
         this.nombre = nombre;
         this.edad = edad;
         this.sexo = sexo;
@@ -75,7 +75,7 @@ public class Persona {
         return peso;
     }
 
-    public int getAltura() {
+    public double getAltura() {
         return altura;
     }
 
@@ -95,7 +95,7 @@ public class Persona {
         this.peso = peso;
     }
 
-    public void setAltura(int altura) {
+    public void setAltura(double altura) {
         this.altura = altura;
     }
     
@@ -116,18 +116,17 @@ public class Persona {
         
         System.out.println("Peso:");
         int p = leer.nextInt();
-        System.out.println("Altura (en centimetros)");
+        System.out.println("Altura (en metros)");
         int a = leer.nextInt();
         
         return new Persona(n, ed, s, p, a);
     }
     
     public int calcularIMC(Persona p){
-        int alt = p.getAltura() / 100;
-        int imc;
-        imc = p.getPeso() / (alt^2);
+        double imc;
+        imc = p.getPeso() / Math.pow(p.getAltura(), 2);
         int retorno;
-        if (imc < 20) {
+        if (imc < 20.0) {
             retorno = -1;
         } else if (imc >= 20 && imc <= 25) {
             retorno = 0;

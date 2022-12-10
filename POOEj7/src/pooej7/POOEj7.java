@@ -43,10 +43,10 @@ public class POOEj7 {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Persona p1 = new Persona("Pepe", 17, "O", 60, 153);
-        Persona p2 = new Persona("Mariano", 14, "M", 58, 153);
-        Persona p3 = new Persona("Cami", 15, "F", 60, 153);
-        Persona p4 = new Persona("Susana", 36, "O", 58, 153);
+        Persona p1 = new Persona("Pepe", 17, "O", 60, 1.53);
+        Persona p2 = new Persona("Mariano", 14, "M", 59, 1.53);
+        Persona p3 = new Persona("Cami", 15, "F", 57, 1.53);
+        Persona p4 = new Persona("Susana", 36, "O", 58, 1.53);
         
         int[] peso = new int [4]; 
         boolean[] edad = new boolean[4];
@@ -80,7 +80,7 @@ public class POOEj7 {
         
         for (int i = 0; i < 4; i++){
             switch (peso[i]){
-                case -1:
+                case 0-1:
                    pesoBajo += 1;
                    break;
                 case 0:
@@ -99,9 +99,9 @@ public class POOEj7 {
         }
         System.out.println("Menores de edad: " + (menor * 100 / 4) + "%");
         System.out.println("Mayores de edad: " + (mayor * 100 / 4) + "%");
-        System.out.println("IMC bajo: " + (pesoBajo * 100 / 4) + "%");
-        System.out.println("IMC normal: " + (pesoNormal * 100 / 4) + "%");
-        System.out.println("IMC alto: " + (pesoAlto * 100 / 4) + "%");
+        System.out.println("IMC bajo: " + ((pesoBajo * 100) / 4) + "%");
+        System.out.println("IMC normal: " + ((pesoNormal * 100) / 4) + "%");
+        System.out.println("IMC alto: " + ((pesoAlto * 100) / 4) + "%");
     }
     
 }
